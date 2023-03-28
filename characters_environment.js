@@ -310,7 +310,7 @@ function manualControl(character){
 /* Movements of character */
 function jumping(character){
 	if( (noseY < 200 &&  character.live) || (touchIsDown&& character.live) ){
-		mario_jump();
+		mario_jump.play();
     character.velocity.y+=gameConfig.jump;
 	}
 }
@@ -381,7 +381,7 @@ function die(character){
     character.velocity.y-=2;
 
     if(character.liveNumber > 0 ){
-      mario.die.play();
+      mario_die.play();
     }
 }
 
